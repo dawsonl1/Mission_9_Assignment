@@ -24,17 +24,17 @@ function TeamCard({
   location: string;
 }) {
   return (
-    <>
+    <div className="team-card">
       <h2>{schoolName}</h2>
       <p>{mascotName}</p>
       <p>{location}</p>
-    </>
+    </div>
   );
 }
 
 function CardList() {
   return (
-    <>
+    <div className="team-grid">
       {data.teams.map((singleTeam) => {
         const location = `${singleTeam.city}, ${singleTeam.state}`;
         return (
@@ -45,7 +45,7 @@ function CardList() {
           />
         );
       })}
-    </>
+    </div>
   );
 }
 
